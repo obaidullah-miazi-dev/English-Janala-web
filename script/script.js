@@ -53,9 +53,9 @@ const displayWord = (words) =>{
         const cardDiv = document.createElement('div')
         cardDiv.innerHTML=`
          <div class="bg-white rounded-xl py-12 px-8 w-[280px] md:w-[500px] text-center space-y-4">
-                <h2 class="font-bold text-2xl">${word.word}</h2>
+                <h2 class="font-bold text-2xl">${word.word?word.word:'No Word Found ❌'}</h2>
                 <p class="font-semibold">Meaning /Pronounciation</p>
-                <h2 class="font-bold font-bengali text-2xl mb-14">"${word.meaning} / ${word.pronunciation}"</h2>
+                <h2 class="font-bold font-bengali text-2xl mb-14">"${word.meaning?word.meaning:'No Meaning Found ❌'} / ${word.pronunciation?word.pronunciation:'No Pronunciation Found ❌'}"</h2>
 
                 <div class="flex justify-between items-center md:px-8 px-2">
                     <button class="btn bg-blue-50 hover:bg-blue-300"><i class="fa-solid fa-circle-info"></i></button>
