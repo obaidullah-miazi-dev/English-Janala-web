@@ -38,6 +38,17 @@ const displayWord = (words) =>{
 
     wordContainer.innerHTML='';
 
+    if(words.length === 0){
+        wordContainer.innerHTML=`
+        <div class="text-center space-y-5 py-10">
+            <img class="mx-auto" src="./assets/alert-error.png" alt="">
+            <p class="text-gray-600 font-medium font-bengali text-xl">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
+            <h2 class="font-bold text-4xl font-bengali">নেক্সট Lesson এ যান</h2>
+           </div>
+        `;
+        return;
+    }
+
     words.forEach(word => {
         const cardDiv = document.createElement('div')
         cardDiv.innerHTML=`
